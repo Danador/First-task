@@ -29,10 +29,10 @@
         <section class="mb-[55px] container mx-auto bg-no-repeat section_about" style="background-image: url('./image/bg_1.png')">
                 <div class="about_items">
                     <div class="relative items_information">
-                       <div class="flex"> 
-                           <div class="information_img">
+                       <div class="grid grid-cols-5"> 
+                           <div class="col-span-2 information_img">
                             <div class=" information_author">
-                                <div class="z-10 relative autor_size w-[645px] h-[968px] ">
+                                <div class="z-10 relative autor_size h-[968px]">
                                     <img class="information_img" src="./image/i'm.png">
                                     <div class="absolute top-[623px] right-[0px] author_name w-[256px] h-[84px] text-white leading-[150%]">
                                         <h2 class="name_h2 not-italic font-bold text-[35.3px]">МИРВАЙС</h2>
@@ -42,7 +42,7 @@
                                 <img class="absolute mt-[-855px] items_circles z-0 ml-[-90px] w-[808px] h-[808px]" src="./image/about_items_circles.png">
                             </div>
                             </div>
-                            <div class=" text-white informarion_txt ml-[14px] mt-[-220px] tracking-tighter self-center">
+                            <div class="col-span-3 text-white informarion_txt ml-[14px] mt-[-220px] tracking-tighter self-center">
                             <div class="information_title">
                                 <h1 class=" leading-[85px] not-italic font-bold tracking-[0.015em] text-[38px] whitespace-nowrap title_site">СОЗДАНИЕ КОНВЕРСИОННОГО САЙТА</h1>
                             </div>
@@ -82,9 +82,9 @@
                                     <p class="tracking-[0.025em] self-center ml-[13px] fact_txt not-italic font-bold text-[24px] leading-[32px]">ФАКТ 3</p>
                             </div>
                         </div>
-                        <div class="site_icons w-[148.49px] h-[170px] justify-between flex absolute top-[570px] right-[50px]" >
+                        <div class="site_icons w-[150px] h-[170px] justify-between flex absolute top-[570px] right-[50px]" >
                             <div class="icons_colored ">
-                                <div class="icon_img w-[35.14px] h-[35.14px]">
+                                <div class="icon_img w-[35.14px] h-[35.14px] mt-[20.79px]">
                                     <a href="#"><img src="./image/telegram (1).png"></a>
                                 </div>
                                 <div class="icon_img w-[35.14px] h-[35.14px] mt-[20.79px]">
@@ -108,10 +108,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex mx-auto information_arrow w-[30px] h-[70px] rounded-[69px] bg-gradient-to-t from-white opacity-[15%] self-center items-center justify-center">
-                    <div class="arrow_blok">
-                        <img class="blok_arrow_2" src="./image/arrow.svg">
-                        <img class="blok_arrow_1" src="./image/arrow.svg">
+                <div class="arrow-block flex items-end justify-center pb-3 relative mx-auto information_arrow w-[30px] h-[70px]">
+                    <div class="arrow-block__bg absolute inset-0 bg-gradient-to-t from-white opacity-[.15] rounded-full"></div>
+                    <div class="arrow-block__body">
+                        <img class="arrow-block__img" src="./image/arrow.svg">
+                        <img class="arrow-block__img" src="./image/arrow.svg">
                     </div>
                 </div>
         </section>
