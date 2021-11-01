@@ -9,7 +9,10 @@ module.exports = {
     extend: {
       colors: {
         'mine-shaft': '#252525',
-      }
+      },
+      animation: {
+        'bounce-slow': 'bounce 1.5s infinite',
+      },
     }
   },
   variants: {
