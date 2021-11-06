@@ -10,13 +10,23 @@
 <body  class="relative bg-mine-shaft">
     <header class="w-full flex  items-center justify-center h-[120px]">
         <nav class="container flex justify-between header__body">
-            <ul class="pl-[110px] grid grid-flow-col text-gray-100 gap-x-8 header__menu not-italic font-semibold text-[16px] leading-[20px] tracking-[0.025em]">
-                <li class="transition-transform header__item motion-safe:hover:scale-110"><a class="header__link" href="#">Главное</a></li>
-                <li class="transition-transform header__item motion-safe:hover:scale-110"><a class="header__link" href="#">Кейсы</a></li>
-                <li class="transition-transform header__item motion-safe:hover:scale-110"><a class="header__link" href="#">Этапы Работы</a></li>
-                <li class="transition-transform header__item motion-safe:hover:scale-110"><a class="header__link" href="#">Обо мне</a></li>
-                <li class="transition-transform header__item motion-safe:hover:scale-110"><a class="header__link" href="#">Контакты</a></li>
-            </ul>
+            <label for="burger" class="w-20 h-20 bg-white burger md:hidden"></label>
+            <input type="checkbox" name="" id="burger" class="sr-only peer">
+            <div class="fixed top-0 left-0 z-50 grid w-full h-full transition-transform -translate-x-full bg-black md:bg-transparent peer-checked:translate-x-0 md:static md:w-auto md:translate-x-0">
+                <!-- <button class="w-20 h-20 bg-white burger md:hidden">
+                    -translate-x-full
+                </button> -->
+                <label class="w-20 h-20 bg-white burger md:hidden" for="burger">
+
+                </label>
+                <ul class="flex flex-col justify-center items-center space-y-4 md:space-y-0 md:pl-[110px] md:grid md:grid-flow-col text-gray-100 gap-x-8 header__menu not-italic font-semibold tracking-[0.025em]">
+                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Главное</a></li>
+                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Кейсы</a></li>
+                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Этапы Работы</a></li>
+                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Обо мне</a></li>
+                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Контакты</a></li>
+                </ul>
+            </div>
             <div class="flex header__contacts">
                 <div class="contact_circle w-[28px] h-[28px] bg-purple-500 rounded-full flex justify-center items-center">
                     <img class="contact_icon" src="./image/Vector_number_icon.svg">
