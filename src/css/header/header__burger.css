@@ -95,21 +95,22 @@
         bottom: 0;
     }
 
-    .header__burger.active span{
+    .header__menu-open .header__burger span{
         transform: scale(0);
     }
 
-    .header__burger.active::before{
+    .header__menu-open .header__burger::before{
         transform: rotate(45deg);
         top: 9px;
     }
 
-    .header__burger.active::after{
+    .header__menu-open .header__burger::after{
         transform: rotate(-45deg);
         bottom: 9px;
     }
 
     .header__menu{
+        visibility: hidden;
         margin-top: auto;
         margin-left: auto;
         position: fixed;
@@ -123,8 +124,9 @@
         padding: 70px 10px 20px 10px;
     }
 
-    .header__menu.active{
+    .header__menu-open .header__menu {
         top: 0;
+        visibility: visible;
     }
 
     .header__list{
