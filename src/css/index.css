@@ -3,3 +3,4 @@
 @import "./style.css";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "./header/header__burger.css";

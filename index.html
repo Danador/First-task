@@ -5,43 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/header/header__burger.css">
+    <title>FIRST-TASK</title>
 </head>
 <body  class="relative bg-mine-shaft">
-    <header class="w-full flex  items-center justify-center h-[120px]">
-        <nav class="container flex justify-between header__body">
-            <label for="burger" class="w-20 h-20 bg-white burger md:hidden"></label>
-            <input type="checkbox" name="" id="burger" class="sr-only peer">
-            <div class="fixed top-0 left-0 z-50 grid w-full h-full transition-transform -translate-x-full bg-black md:bg-transparent peer-checked:translate-x-0 md:static md:w-auto md:translate-x-0">
-                <!-- <button class="w-20 h-20 bg-white burger md:hidden">
-                    -translate-x-full
-                </button> -->
-                <label class="w-20 h-20 bg-white burger md:hidden" for="burger">
-
-                </label>
-                <ul class="flex flex-col justify-center items-center space-y-4 md:space-y-0 md:pl-[110px] md:grid md:grid-flow-col text-gray-100 gap-x-8 header__menu not-italic font-semibold tracking-[0.025em]">
-                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Главное</a></li>
-                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Кейсы</a></li>
-                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Этапы Работы</a></li>
-                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Обо мне</a></li>
-                    <li class="transition-transform header__item md:hover:scale-110"><a class="header__link" href="#">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="flex header__contacts">
-                <div class="contact_circle w-[28px] h-[28px] bg-purple-500 rounded-full flex justify-center items-center">
-                    <img class="contact_icon" src="./image/Vector_number_icon.svg">
+    <header class="header">
+        <div class="container mx-auto">
+            <div class="header__body">
+                <div class="header__burger">
+                    <span></span>
                 </div>
-                <p class="ml-2 text-xl text-gray-100 pr-7 header__number">+7 (915) 271 93 37</p>
+                <nav class="header__menu">
+                    <ul class="header__list ">
+                        <li>
+                            <a href="#" class="header__link">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Кейсы</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Этапы работы</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Обо мне</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                    <div class="flex header__contacts">
+                        <div class="contact_circle w-[28px] h-[28px] bg-purple-500 rounded-full flex justify-center items-center">
+                            <img class="contact_icon" src="./image/Vector_number_icon.svg">
+                        </div>
+                        <p class="ml-2 text-xl text-gray-100 pr-7 header__number">+7 (915) 271 93 37</p>
+                    </div>
             </div>
-        </nav>
+        </div>
     </header>
     <main>
-        <section class="mb-[55px] container mx-auto bg-no-repeat section-about" style="background-image: url('./image/bg_1.png')">
+        <section class="mb-[55px] container mx-auto bg-no-repeat section-about">
                 <div class="section-about__items">
                     <div class="relative section-about__information">
                        <div class="flex"> 
                            <div class="information_img">
-                            <div class=" information_author">
+                            <div class="hidden information_author lg:block">
                                 <div class="z-10 relative author w-[645px] h-[968px] ">
                                     <img class="information_img" src="./image/mirvais.png">
                                     <div class="absolute top-[623px] right-[0px] author_name w-[256px] h-[84px] text-white leading-[150%]">
@@ -52,62 +60,23 @@
                                 <img class="absolute mt-[-855px] items_circles z-0 ml-[-90px] w-[808px] h-[808px]" src="./image/about_items_circles.png">
                             </div>
                             </div>
-                            <div class="col-span-3 text-white informarion_txt ml-[14px] tracking-tighter self-center">
+                            <div class="col-span-3 text-white informarion_txt ml-[14px] tracking-tighter self-center mt-20 lg:mt-0">
                             <div class="information_title">
-                                <h1 class=" leading-[85px] not-italic font-bold tracking-[0.015em] text-[38px] whitespace-nowrap title_site">СОЗДАНИЕ КОНВЕРСИОННОГО САЙТА</h1>
+                                <h1 class=" leading-[85px] not-italic font-bold tracking-[0.015em] text-[38px] title_site">СОЗДАНИЕ КОНВЕРСИОННОГО САЙТА</h1>
                             </div>
                             <div class="information_sub_title">
-                                <p class="text-[25px] leading-[37px] font-normal subtitle_sit not-italic">Доверьте свой проект нам и получите сайт, который сможет повысить конверсию в 5 раз</p>
+                                <p class="text-[25px] leading-[37px] font-normal subtitle_site not-italic">Доверьте свой проект нам и получите сайт, который сможет повысить конверсию в 5 раз</p>
                             </div>
-                            <button class="transition-transform button_about_me motion-safe:hover:scale-110 pb-28">
+                            <button class="flex items-center justify-center w-full transition-transform lg:grid lg:items-start button_about_me motion-safe:hover:scale-110 lg:justify-start">
                                 <div class=" h-12 bg-[#486DF0] button_style w-60 mt-[9px] rounded-[10px] flex justify-center items-center">
                                     <p class="text-[16px] leading-[24px] button_txt font-semibold not-italic">Cвязаться со мной</p>
                                 </div>
                             </button>
-                            <div class="flex text-white information_facts whitespace-nowrap">
-                                <div class="flex information_fact_1 w-[181px] h-[67px]">
-                                    <div class="fact_circle">
-                                        <div class=" flex circle_circle w-[67px] h-[67px] bg-[#486DF0] rounded-full">
-                                            <img class="m-auto fact_number" src="./image/+25.svg">
-                                        </div>
-                                    </div>
-                                        <p class="tracking-[0.025em] self-center ml-[13px] fact_txt not-italic font-bold text-[24px] leading-[32px]">ФАКТ 1</p>
-                                </div>
-                                <div class="flex information_fact_1 w-[181px] h-[67px] ml-[44px]">
-                                    <div class=" fact_circle">
-                                        <div class=" flex circle_circle w-[67px] h-[67px] bg-[#486DF0] rounded-full">
-                                            <img class="m-auto fact_number" src="./image/3.svg">
-                                        </div>
-                                    </div>
-                                        <p class="tracking-[0.025em] self-center ml-[13px] fact_txt not-italic font-bold text-[24px] leading-[32px]">ФАКТ 2</p>
-                                </div>
-                                <div class="flex information_fact_1 w-[181px] h-[67px] ml-[44px]">
-                                    <div class=" fact_circle">
-                                        <div class=" flex circle_circle w-[67px] h-[67px] bg-[#486DF0] rounded-full">
-                                            <img class="m-auto fact_number" src="./image/14.svg">
-                                        </div>
-                                    </div>
-                                        <p class="tracking-[0.025em] self-center ml-[13px] fact_txt not-italic font-bold text-[24px] leading-[32px]">ФАКТ 3</p>
-                                </div>
-                                <div class="site_icons w-[150px] h-[170px] justify-between right-[50px] ml-10 flex -my-9" >
-                                    <div class="icons_colored">
-                                        <div class="mb-5 icon_img">
-                                            <a href="#"><img src="./image/telegram (1).png"></a>
-                                        </div>
-                                        <div class="icon_img">
-                                            <a href="#"><img src="./image/vkontakte (1).png"></a>
-                                        </div>
-                                        <div class="mt-5 icon_img">
-                                            <a href="#"><img src="./image/instagram (1).png"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="relative animate-bounce-slow flex items-end justify-center pb-3 mx-auto arrow-block information_arrow w-[30px] h-[70px]">
+                <div class="relative animate-bounce-slow flex items-end mt-20 lg:mt-0 justify-center pb-3 mx-auto arrow-block information_arrow w-[30px] h-[70px]">
                     <div class="arrow-block__bg absolute inset-0 bg-gradient-to-t from-white opacity-[.15] rounded-full"></div>
                     <div class="arrow-block__body">
                         <img class="arrow-block__img" src="./image/arrow.svg">
@@ -118,7 +87,7 @@
         <section class="section-guide bg-[#486DF0]">
             <div class="h-[530px] container mx-auto justify-between overflow-hidden flex">
                 <div class="text-white w-1/2 guide_information mt-[79px] h-[184px] ml-12">
-                    <p class="guide_h2 not-italic font-bold text-[20px] leading-[150%] tracking-[0.015em] whitespace-nowrap">ПОЛУЧИТЕ БЕСПЛАТНЫЙ ГАЙД ПО УСПЕШНОМУ ЗАПУСКУ САЙТА!</p>
+                    <p class="guide_h2 not-italic font-bold text-[20px] leading-[150%] tracking-[0.015em]">ПОЛУЧИТЕ БЕСПЛАТНЫЙ ГАЙД ПО УСПЕШНОМУ ЗАПУСКУ САЙТА!</p>
                     <p class="guide_p not-italic text-[15px] tracking-[0.015em] pt-12 block max-w-[580px]">Многие компании упускают важные моменты при запуске сайта, которые тормозят поток клиентов и теряют прибыль. Не будьте как все, получите гайд и применяйте его в своём бизнесе!</p>
                     <div class="flex guide_site h-[45px] w-[268px] mt-[69px]">
                         <a href="#"><img class="gs_inst w-[44.61px] h-[44.61px]" src="./image/inst.svg"></a>
@@ -127,7 +96,7 @@
                     </div>
                 </div>
                <div class="box-border relative inset-0 flex items-center justify-center w-1/2 mr-24 section-guide__img">
-                   <div class="flex items-center justify-center section-guide__img__circles">
+                   <div class="hidden lg:flex lg:items-center lg:justify-center section-guide__img__circles">
                         <div class="absolute w-[770px] h-[770px] border-white border-2 rounded-full opacity-50"></div>
                         <div class="absolute w-[610px] h-[610px] border-white border-2 rounded-full opacity-25"></div>
                         <div class="absolute w-[470px] h-[470px] border-white border-2 rounded-full opacity-25"></div>
@@ -146,7 +115,7 @@
                     <div class=" section-marketing__title">
                         <h1 class="text-center not-italic text-white text-[35px] tracking-[0.015em]">КОМУ НУЖЕН САЙТ!</h1>
                     </div>
-                    <div class="relative flex justify-center mx-auto mt-24 section-marketing__img__box">
+                    <div class="relative justify-center hidden mx-auto mt-24 xl:flex section-marketing__img__box">
                         <div class=" w-[300px] h-[300px] relative items-center justify-center section-marketing__img__statua">
                             <img class="absolute" src="./image/Vector_marketing.png">
                             <img class="absolute mx-[20%] my-[17%]" src="./image/Ellipse_marketing.png">
@@ -172,28 +141,28 @@
                             <img class="absolute mx-[5%] my-[-33%] z-0" src="./image/build_shadow.png">
                         </div>
                     </div>
-                    <div class="flex text-white section-marketing__txt__box">
-                        <div class="text-center max-w-[292px] ml-[90px]">
+                    <div class="mt-8 text-white xl:mt-0 xl:flex section-marketing__txt__box">
+                        <div class="text-center mx-auto xl:mx-0 max-w-[292px]">
                             <p class=" not-italic font-bold text-[20px] leading-[150%] tracking-[0.015em]">ЭКСПЕРТАМ</p>
                             <p class="mt-4 not-italic font-normal leading-normal text-[16px] tracking-[0.015em]">Facilisis dui cursus morbi vitae vulputate. Et eu id dignissim sagittis duis consectetur pulvinar.</p>
                         </div>
-                        <div class="text-center max-w-[292px] ml-[60px]">
+                        <div class="text-center mx-auto xl:mx-0 max-w-[292px] xl:ml-[60px] mt-8 xl:mt-0">
                             <p class=" not-italic font-bold text-[20px] leading-[150%] tracking-[0.015em]">E-COMMERCE</p>
                             <p class="mt-4 not-italic font-normal leading-normal text-[16px] tracking-[0.015em]">Facilisis dui cursus morbi vitae vulputate. Et eu id dignissim sagittis duis consectetur pulvinar.</p>
                         </div>
-                        <div class="text-center max-w-[292px] ml-[50px]">
+                        <div class="text-center mx-auto xl:mx-0 max-w-[292px] xl:ml-[50px] mt-8 xl:mt-0">
                             <p class=" not-italic font-bold text-[20px] leading-[150%] tracking-[0.015em]">ОНЛАЙН-ШКОЛАМ</p>
                             <p class="mt-4 not-italic font-normal leading-normal text-[16px] tracking-[0.015em]">Facilisis dui cursus morbi vitae vulputate. Et eu id dignissim sagittis duis consectetur pulvinar.</p>
                         </div>
-                        <div class="text-center max-w-[286px] ml-[55px]">
+                        <div class="text-center mx-auto xl:mx-0 max-w-[286px] xl:ml-[55px] mt-8 xl:mt-0">
                             <p class=" not-italic font-bold text-[20px] leading-[150%] tracking-[0.015em]">МАСШТАБНОМУ БИЗНЕСУ</p>
                             <p class="mt-4 not-italic font-normal leading-normal text-[16px] tracking-[0.015em]">Facilisis dui cursus morbi vitae vulputate. Et eu id dignissim sagittis duis consectetur pulvinar.</p>
                         </div>
                     </div>
                 </div>
                 <div class=" section-marketing__help h-[550px] mt-48 mx-auto">
-                    <h1 class="text-center text-white not-italic font-bold text-[35px] leading-[150%] tracking-[0.015em">КАК Я МОГУ ПОМОЧЬ?</h1>
-                    <div class="flex items-center justify-center mt-16 section-marketing__help__img">
+                    <h1 class="text-center mx-auto xl:mx-0 text-white not-italic font-bold text-[35px] leading-[150%] tracking-[0.015em">КАК Я МОГУ ПОМОЧЬ?</h1>
+                    <div class="items-center justify-center hidden mt-16 xl:flex section-marketing__help__img">
                         <div class="relative  w-[300px] h-[300px]  section-marketing__help__notes">
                             <img class="absolute" src="./image/Vector_marketing.png">
                             <img class="absolute mx-[23%] my-[15%] z-10" src="./image/notes_marketing_help.png">
@@ -210,16 +179,16 @@
                             <img class="absolute z-0" src="./image/book_marketing_help_shadow.png">
                         </div>
                     </div>
-                    <div class="flex justify-between mx-auto text-white section-marketing__help__txt w-[1000px]">
-                        <div class="text-center max-w-[292px]">
+                    <div class="mx-auto text-white xl:flex xl:justify-center section-marketing__help__txt">
+                        <div class="mx-auto xl:mx-0 text-center max-w-[292px] mt-8 xl:mt-0">
                             <p class="not-italic font-bold text-[16px] leading-[115%] tracking-[0.015em">СОЗДАМ ГРАМОТНУЮ СТРУКТУРУ САЙТА</p>
                             <p class="mt-6 not-italic font-normal leading-normal text-[16px] tracking-[0.015em]">Facilisis dui cursus morbi vitae vulputate. Et eu id dignissim sagittis duis consectetur pulvinar.</p>
                         </div>
-                        <div class="text-center max-w-[292px]">
+                        <div class="mx-auto xl:mx-0 text-center max-w-[292px] mt-8 xl:mt-0 xl:ml-12 xl:mr-12">
                             <p class="not-italic font-bold text-[16px] leading-[115%] tracking-[0.015em">ПОДБЕРУ ВИЗУАЛ, ОТВЕЧАЮЩИЙ ЗАПРОСАМ КЛИЕНТА</p>
                             <p class="mt-6 not-italic font-normal leading-normal text-[16px] tracking-[0.015em]">Vivamus tristique consequat, tellus tellus. Ut urna, nisl lorem pharetra amet.</p>
                         </div>
-                        <div class="text-center max-w-[292px]">
+                        <div class="mx-auto xl:mx-0 text-center max-w-[292px] mt-8 xl:mt-0">
                             <p class="not-italic font-bold text-[16px] leading-[115%] tracking-[0.015em">ПРЕДОСТАВЛЮ ЧЕТКИЙ ПЛАН ПО ЗАПУСКУ САЙТА</p>
                             <p class="mt-6 not-italic font-normal leading-normal text-[16px] tracking-[0.015em]">Amet viverra massa libero et nibh ultricies ullamcorper. Dui maecenas quisque vitae at mollis rhoncus gravida lectus.</p>
                         </div>
@@ -228,23 +197,23 @@
             </div>
         </section>
         <section class="section-cases  bg-[#486DF0] ">
-            <div class="h-[740px] text-white mx-auto mt-64 container">
+            <div class="xl:h-[740px] text-white mx-auto mt-64 container">
                 <h1 class="mt-16 text-center text-4xl not-italic leading-normal font-bold tracking-[0.015em]" >МОИ КЕЙСЫ</h1>
                 <div class="flex justify-center mt-[90px] section-cases__items h-96">
-                    <div class="relative section-cases__img">
+                    <div class="hidden xl:relative xl:block section-cases__img">
                         <img class="section-cases__macbook w-[600px] h-[350px]" src="./image/Device - Macbook Pro.png">
                     </div>
-                    <div class="ml-10 section-cases__text">
-                        <p class="mb-8 max-w-[300px] text-2xl title">ЛЕНДИНГ ДЛЯ ПРОДАЖИ ВИДЕОРЕГИСТРАТОРА</p>
-                        <p class="subtitle max-w-[400px]">Non in ut phasellus tempor. Eget facilisi est a, vel vivamus cursus nec porta duis. Amet, aliquam magna maecenas aliquam nisl. In at orci, duis aliquet nec ultrices viverra. Malesuada feugiat vulputate mauris aenean vitae mattis. Blandit aliquam etiam dignissim at sit egestas. Orci nunc sagittis id donec mattis lectus placerat fermentum gravida.</p>
-                        <button class="mt-3 transition-transform button_design motion-safe:hover:scale-110">
+                    <div class="xl:ml-10 section-cases__text">
+                        <p class="mb-8 xl:max-w-[300px] text-2xl title xl:text-left text-center">ЛЕНДИНГ ДЛЯ ПРОДАЖИ ВИДЕОРЕГИСТРАТОРА</p>
+                        <p class="subtitle xl:max-w-[400px] xl:text-left text-center">Non in ut phasellus tempor. Eget facilisi est a, vel vivamus cursus nec porta duis. Amet, aliquam magna maecenas aliquam nisl. In at orci, duis aliquet nec ultrices viverra. Malesuada feugiat vulputate mauris aenean vitae mattis. Blandit aliquam etiam dignissim at sit egestas. Orci nunc sagittis id donec mattis lectus placerat fermentum gravida.</p>
+                        <button class="flex items-center justify-center w-full mt-3 transition-transform xl:block button_design motion-safe:hover:scale-110">
                             <div class=" h-12 bg-white button_style w-60 mt-[9px] rounded-[10px] flex justify-center items-center">
-                                <p class="text-[16px] text-[#486DF0] leading-[24px] button_txt font-semibold not-italic">Нам нужен дизайн!</p>
+                                <p class="text-[16px] text-[#486DF0] leading-[24px] button_txt font-semibold">Нам нужен дизайн!</p>
                             </div>
                         </button>
                     </div>
                 </div>
-                <div class="relative flex h-8 max-w-xl mx-auto mt-24 section-cases__slider">
+                <div class="relative hidden h-8 max-w-xl mx-auto mt-24 xl:flex section-cases__slider">
                     <div class="slider__line w-[460px] relative self-center">
                         <div class="h-1 bg-white rounded-md w-[25%] absolute"></div>
                         <div class="h-1  rounded-md opacity-[25%] bg-white"></div>
@@ -261,10 +230,10 @@
             </div>
         </section>
         <section class="container mx-auto mt-24 section-work">
-            <div class="text-white h-[650px] section-work__stages">
+            <div class="text-white xl:h-[650px] section-work__stages">
                 <h1 class="text-center not-italic font-bold text-4xl leading-normal tracking-[0.015em]">ЭТАПЫ РАБОТЫ СО МНОЙ</h1>
-                <div class="flex justify-around mt-32 work_facts">
-                    <div class="mt-0">
+                <div class="mx-auto mt-32 xl:mx-auto max-w-[400px] xl:max-w-full xl:flex xl:justify-around work_facts">
+                    <div class=" xl:mt-0">
                         <div class="flex fact_circle">
                             <div class=" flex circle_circle w-[75px] h-[75px] bg-[#486DF0] rounded-full">
                                 <img class="m-auto fact_number" src="./image/1.svg">
@@ -275,7 +244,7 @@
                             </div>
                         </div> 
                     </div>
-                    <div class="mt-[92px]">
+                    <div class="xl:mt-[92px]">
                         <div class="flex fact_circle">
                             <div class=" flex circle_circle w-[75px] h-[75px] bg-[#486DF0] rounded-full">
                                 <img class="m-auto fact_number" src="./image/2.svg">
@@ -286,7 +255,7 @@
                             </div>
                         </div> 
                     </div>
-                    <div class="mt-[184px]">
+                    <div class="xl:mt-[184px]">
                         <div class="flex fact_circle">
                             <div class=" flex circle_circle w-[75px] h-[75px] bg-[#486DF0] rounded-full">
                                 <img class="m-auto fact_number" src="./image/3_circle_work.svg">
@@ -297,7 +266,7 @@
                             </div>
                         </div> 
                     </div>
-                    <div class="mt-[276px]">
+                    <div class="xl:mt-[276px]">
                         <div class="flex fact_circle">
                             <div class=" flex circle_circle w-[75px] h-[75px] bg-[#486DF0] rounded-full">
                                 <img class="m-auto fact_number" src="./image/4.svg">
@@ -310,15 +279,15 @@
                     </div>
                 </div>
             </div>
-            <div class="text-white h-[680px] mt-24 section-work__command">
+            <div class="text-white xl:h-[680px] mt-24 section-work__command">
                 <h1 class="text-center not-italic font-bold text-4xl tracking-[0.015em]">МОЯ КОМАНДА</h1>
-                <div class="flex justify-around mt-24 tracking-[0.015em]">
-                    <div class="flex-col">
+                <div class="xl:flex xl:justify-around mt-24 tracking-[0.015em] text-center mx-auto xl:mx-0 max-w-[300px] xl:max-w-full">
+                    <div>
                         <img src="./image/mirvais_command.png">
                         <p class="mt-6 mb-6 text-2xl not-italic font-bold">МИРВАЙС АЦАКЗАЙ</p>
                         <p class="max-w-[330px] font-medium">Tincidunt convallis morbi et viverra viverra lectus sed. Neque hac et laoreet vitae, est sed mi viverra eget.</p>
                     </div>
-                    <div>
+                    <div class="mt-8 mb-8 xl:mt-0 xl:mb-0">
                         <img src="./image/nevskiy_command.png">
                         <p class="mt-6 mb-6 text-2xl not-italic font-bold">ЕВГЕНИЙ НЕВСКИЙ</p>
                         <p class="max-w-[330px] font-medium">Tincidunt convallis morbi et viverra viverra lectus sed. Neque hac et laoreet vitae, est sed mi viverra eget.</p>
@@ -332,7 +301,7 @@
             </div>
         </section>
         <section class="section-questions bg-[#486DF0] container mx-auto">
-            <div class="h-[700px] mx-auto justify-center overflow-hidden flex mt-48">
+            <div class="md:h-[700px] h-[500px] mx-auto justify-center overflow-hidden flex mt-48">
                <div class="box-border relative inset-0 flex items-center justify-center section-qustions__itames">
                    <div class="flex items-center justify-center mx-auto section-questions__circles">
                         <div class="absolute w-[1370px] h-[1370px] border-white border-2 rounded-full opacity-50"></div>
@@ -340,32 +309,32 @@
                         <div class="absolute w-[680px] h-[680px] border-white border-2 rounded-full opacity-25"></div>
                    </div>
                    <div class="flex absolute items-center flex-col justify-center section-questions__questions h-[520px]">
-                        <h1 class="text-4xl text-center text-white mb-11">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ:</h1>
-                        <div class="h-[70px] w-[670px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black">
+                        <h1 class="md:text-4xl text-center text-white text-[25px] mb-11">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ:</h1>
+                        <div class="xl:h-[70px] xl:w-[670px] md:text-[16px] text-[10px] md:h-12 md:w-[600px] h-6 w-[500px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black">
                             <p class="ml-10">Вопрос №1</p>
                             <button>
                                 <p class="mr-5">+</p>
                             </button>
                         </div>
-                       <div class="h-[70px] w-[670px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black mt-5 mb-5">
+                       <div class="xl:h-[70px] xl:w-[670px] md:text-[16px] text-[10px] md:h-12 md:w-[600px] h-6 w-[500px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black mt-5 mb-5">
                         <p class="ml-10">Вопрос №2</p>
                         <button>
                             <p class="mr-5">+</p>
                         </button>
                        </div>
-                       <div class="h-[70px] w-[670px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black ">
+                       <div class="xl:h-[70px] xl:w-[670px] md:text-[16px] text-[10px] md:h-12 md:w-[600px] h-6 w-[500px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black ">
                         <p class="ml-10">Вопрос №3</p>
                         <button>
                             <p class="mr-5">+</p>
                         </button>
                        </div>
-                       <div class="h-[70px] w-[670px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black  mt-5 mb-5">
+                       <div class="xl:h-[70px] xl:w-[670px] md:text-[16px] text-[10px] md:h-12 md:w-[600px] h-6 w-[500px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black  mt-5 mb-5">
                         <p class="ml-10">Вопрос №4</p>
                         <button>
                             <p class="mr-5">+</p>
                         </button>
                        </div>
-                       <div class="h-[70px] w-[670px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black">
+                       <div class="xl:h-[70px] xl:w-[670px] md:text-[16px] text-[10px] md:h-12 md:w-[600px] h-6 w-[500px] bg-white rounded-[10px] flex justify-between items-center self-center text-lg text-black">
                         <p class="ml-10">Вопрос №5</p>
                         <button>
                             <p class="mr-5">+</p>
@@ -387,7 +356,7 @@
                         <a href="#"><img src="./image/VK (1).png"></a>
                         <a href="#"><img src="./image/telegram (2).png"></a>
                     </div>
-                    <div class="relative flex justify-end section-footer__discuss__items">
+                    <div class="relative justify-end hidden lg:flex section-footer__discuss__items">
                         <img class=" w-[470px] h-[470px] my-[-14%] absolute z-0" src="./image/about_items_circles.png">
                         <img class="absolute mx-[6%] my-[-7%]" src="./image/footer__discuss__letter.png">
                     </div>
