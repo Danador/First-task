@@ -22,8 +22,37 @@
 }
 
 .header__burger{
-    display: none;
+    @apply lg:hidden relative w-8 h-6 z-[3] ml-2.5;
 }
+
+.header__burger span{
+    @apply absolute bg-white left-0 w-full h-0.5 top-1/2 -translate-y-1/2 transition-all;
+}
+
+.header__burger::before,
+.header__burger::after{
+    content: '';
+    @apply bg-white absolute w-full h-[3px] left-0 transition-all;
+}
+.header__burger::before{
+    @apply top-0;
+}
+.header__burger::after{
+    @apply bottom-0;
+}
+
+.header__menu-open .header__burger span{
+    @apply opacity-0;
+}
+
+.header__menu-open .header__burger::before{
+    @apply rotate-45 -translate-y-1/2 top-1/2;
+}
+
+.header__menu-open .header__burger::after{
+    @apply -rotate-45 translate-y-1/2 bottom-1/2;
+}
+
 
 .header__list{
     display: flex;
@@ -48,7 +77,9 @@
     transition: all 0.3s ease 0s;
 }
 
-.header__menu{}
+.header__menu {
+
+}
 
 @media (max-width:1024px){
     body.lock{
@@ -56,53 +87,6 @@
     }
     .header__body{
         height: 50px;
-    }
-    .header__burger{
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 20px;
-        z-index: 3;
-        margin-left: 10px;
-    }
-    .header__burger span{
-        position: absolute;
-        background-color: #fff;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        top: 47%;
-        transition: all 0.3s ease 0s;
-    }
-    .header__burger::before,
-    .header__burger::after{
-        content:'';
-        background-color: #fff;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        left: 0;
-        transition: all 0.3s ease 0s;
-    }
-    .header__burger::before{
-        top: 0;
-    }
-    .header__burger::after{
-        bottom: 0;
-    }
-
-    .header__menu-open .header__burger span{
-        transform: scale(0);
-    }
-
-    .header__menu-open .header__burger::before{
-        transform: rotate(45deg);
-        top: 9px;
-    }
-
-    .header__menu-open .header__burger::after{
-        transform: rotate(-45deg);
-        bottom: 9px;
     }
 
     .header__menu{
